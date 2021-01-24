@@ -3,6 +3,15 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 import { nanoid } from "nanoid";
+import Nav from "./components/Nav";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const FILTER_MAP = {
   All: () => true,
@@ -78,7 +87,23 @@ function App(props) {
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
   return (
+    
     <div className="todoapp stack-large">
+      <Router>
+          <Nav />
+          <Switch>
+              <Route path="/about">
+                  <About />
+              </Route>
+              <Route path="/todo">
+                  <Todo />
+              </Route>
+              <Route path="/contact">
+                  <Contact />
+              </Route>
+          </Switch>
+      </Router>
+
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         {filterList}  

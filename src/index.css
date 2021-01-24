@@ -55,10 +55,8 @@ input[type="text"] {
 }
 body {
   width: 100%;
-  max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
   color: #4d4d4d;
 }
 @media screen and (min-width: 620px) {
@@ -89,8 +87,8 @@ body {
 }
 .btn__danger {
   color: #fff;
-  background-color: #ca3c3c;
-  border-color: #bd2130;
+  background-color: #8a3cca;
+  border-color: #441f62;
 }
 .btn__filter {
   border-color: lightgrey;
@@ -150,7 +148,6 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {
@@ -188,7 +185,6 @@ body {
   box-shadow: inset 0 0 0 2px;
 }
 [class*="__lg"] {
-  display: inline-block;
   width: 100%;
   font-size: 1.9rem;
 }
@@ -289,4 +285,20 @@ body {
 }
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
+}
+/* nav bar */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3rem;
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.list-item {
+  color: black;
+}
+/* Ids */
+#new-todo-input {
+  text-align: center;
 }

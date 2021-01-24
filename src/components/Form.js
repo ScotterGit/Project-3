@@ -15,7 +15,7 @@ function Form(props) {
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
+        <label htmlFor="new-todo-input">
           What needs to be done?
         </label>
       </h2>
@@ -27,7 +27,9 @@ function Form(props) {
         autoComplete="off"
         value={name}
         onChange={handleChange}
+        placeholder="Learn how to use react"
       />
+      <br/>
       <button type="submit" className="btn btn__primary btn__lg">
         Add
       </button>
