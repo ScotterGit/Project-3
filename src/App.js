@@ -10,8 +10,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "./About";
+import Contact from "./Contact";
 
 const FILTER_MAP = {
   All: () => true,
